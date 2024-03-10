@@ -4,5 +4,6 @@ primer repocitorio creado en github
 
 
 
-##descripcion
-creando un proyecto de -.....
+# Decripcion
+
+creando un proyecto
