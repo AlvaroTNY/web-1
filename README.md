@@ -1,4 +1,8 @@
-# web-1
+# repocitorio de alvaro
 primer repocitorio creado en github
-#descripcion
+
+
+
+
+##descripcion
 creando un proyecto de -.....
