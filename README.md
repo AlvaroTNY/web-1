@@ -1,9 +1,8 @@
-# repocitorio de alvaro
-primer repocitorio creado en github
+# repositorio ....
+Repocitorio  en github
 
 
 
 
 # Decripcion
-
-creando un proyecto
+En espera de un mejor proyecto.....
