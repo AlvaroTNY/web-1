@@ -1,0 +1,62 @@
+@use '../base/variable' as v;
+@use 'base/mixis' as M;
+
+
+.video{
+    position: relative;//establece su posicion original  el flujo del documento
+    max-height: 50rem;//medida maxima de la caja
+    min-height: 35rem;//medida minima de la caja
+    // min-height: 40rem;
+    position: relative;
+    overflow: hidden;//el corte presetando lo podemos solucionar con  overflow: hidden 
+
+    .overlay{
+        position: absolute;//posiciona dentro del elemento de manera absoluta
+        // haciendo q la clase tome toda la posicion del video
+        height: 100%;
+        width: 100%;
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(217,3,216,0.5) 46%, rgba(0,212,255,1) 100%);
+        display: flex;
+        flex-direction: column;//lo podemos usar para alineara de manera q esta en columna
+        justify-content: center;
+    }
+    video{
+        // la manera de adaptar un video a una resolucion mas pequeña
+        display: block;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        // // width: 100%;
+        // // width: auto;
+        // // overflow: hidden;
+        // display: block;//lo usamos pra q el efecto de los gradients no sobre pase de la caja de video
+        // object-fit: cover;
+        // @include M.dektop {
+        //     width: 100%; 
+        //     height: 100%;
+        //     position: absolute;
+        // }
+    }
+    // pocisionando el texto
+    .contenido-video{
+        z-index: 100;//se sobrepone encima del video y  si se lo pones -1 se ira para atras
+            
+        h2{
+            color: v.$blanco;
+            font-size: 3rem;
+            // hay q saber te todo los headirg siempre traen algo de pixeles por defecto por lo tanto lo esataremos quitando
+            margin: 0;
+        }
+        p{
+            background-color: v.$rosa;
+            display: inline-block;//si hay elemento debajo de el no le permitira q se coloque a su costado
+            padding: 4px;
+            font-size: 12px;
+            color: v.$blanco;
+            border-radius: 5px;
+            font-weight: 700;
+        }
+    }
+}

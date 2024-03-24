@@ -1,0 +1,65 @@
+
+@use '../base/variable' as v;
+@use 'base/mixis' as M;
+
+
+.sobre-festival{
+    padding: 5rem 0;
+    .imagen-festival1 img{
+        // margin-left: 50px;
+        display: block;
+        margin: auto;
+        height: 100%;
+        // img { manera dos de movilizar una imagen a lado derecho
+        //     float: right;
+        // }
+    }
+    @include M.tablet {//llamando a grid desde mixis
+        @include M.grid(2, 1rem);//toma la cantidad de columnas y lo ejecutamos en el mixins como una variable
+    }
+    // @media (min-width: 201px) and (max-width: 900px) {
+    // @include M.telefono {
+    //     display: flex;
+    //     flex-direction: column;
+    // }
+
+}
+.contenido-festival{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-right: 50px;
+    margin-left: 40px;
+    // centrando un contenido
+    h2{
+        // margin-top: -20px;
+        font-size: 2rem;
+        font-weight: 700;
+    }   
+    .fecha{
+        margin-top: -18px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: v.$rosa;
+    }
+    .texto{
+        margin-top: -5px;
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+    // @include M.telefono {
+    //     .contenido-festival{
+    //         h2{
+    //             margin: 90px;
+    //         }
+    //     }
+    // }
+    // aplicando el media queri
+}
+      // @include M.dektop {
+        //     width: 100%; 
+        //     height: 100%;
+        //     position: absolute;
+        // }
+

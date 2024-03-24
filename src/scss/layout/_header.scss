@@ -1,0 +1,83 @@
+@use '../base/variable' as v;
+
+// impotando un mixing desde otra carpteta lo cual ya contine un codigo dentro y eso es lo q no facilita implementarlo
+@use 'base/mixis' as M;
+
+
+.header{
+    background-color: v.$verde;
+    @include M.tablet {
+        &.fijo{
+            left: 0;
+            top: 0;
+            position: fixed;
+            width: 100%;
+            box-shadow: .3rem .3rem .3rem #333;
+        } 
+    }
+    // anidacion en sass
+    h1{
+        color: v.$blanco;
+        text-align: center;
+        @include M.tablet {
+            margin: 0;
+        }
+    }
+    .contenido-header{
+        padding: 1.4rem;
+        @include M.tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+.navegacion-principal{
+    @include M.tablet {
+        display: flex;
+        gap: 2rem;
+    }
+    // @include M.tablet {
+
+    // background-color: rgb(43, 226, 150);
+    // @include M.telefono{
+    //     background-color: chartreuse;
+    // }
+    // @include M.tablet{
+    //     background-color: darkred;
+    // }
+    // @include M.dektop{
+    //     background-color: darkgreen;
+    // }
+    // @include M.dektopXL{
+    //     background-color: darkcyan;
+    // }
+    // aplicando un mixing
+    // @include M.resolucionMovil{
+    //     background-color: blue;
+    //     display: block;
+    //     width: 300px;
+    //     height: 200px;
+    // }
+    // preferences: Configure User Snippets
+    a{
+        display: block;//se colocara de arriba hacia abajo en este caso son los enlaces
+        text-align: center;
+        margin-bottom: 1rem;
+        color: v.$blanco;
+        font-size: 1.5rem;
+        @include M.tablet {
+            margin: 0;
+        }
+        // @include M.resolucionMovil{
+        //     font-size: 8rem;
+        //     color: chartreuse;
+        // }
+        &:hover{ //el & quita el espacio q tiene por defecto y eso hace o lo convierte en un selector
+            color: v.$amarillo;
+        }
+    }
+}
+// .prueba{
+//     @include M.heading(vt.$amarillo, true);//colocando un segundo  valor 
+// }

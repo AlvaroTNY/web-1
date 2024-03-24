@@ -1,0 +1,32 @@
+{
+  "name": "festivalmusica_inicio",
+  "version": "1.0.0",
+  "description": "Proyecto con Sass  Gulp y Html",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css",
+    "tarea": "gulp tarea",
+    "css": "gulp css",
+    "dev": "gulp dev"
+  },
+  "keywords": [
+    "Sass",
+    "Gulp"
+  ],
+  "author": "Alvaro pariona",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.18",
+    "cssnano": "^6.1.0",
+    "gulp": "^4.0.2",
+    "gulp-avif": "^1.1.1",
+    "gulp-cache": "^1.1.3",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^10.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-webp": "^4.0.1",
+    "postcss": "^8.4.36",
+    "sass": "^1.72.0"
+  }
+}

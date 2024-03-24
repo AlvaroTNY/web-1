@@ -1,0 +1,56 @@
+// llamando al archivo variable
+@use "variable" as v;
+
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+
+}
+*,
+*:before,
+*:after{
+    box-sizing: inherit;//es para prevenir q el pading no nos presente un problema 
+}   
+body{
+    font-family: v.$fuente_principal;
+    font-size: 1.6rem;
+
+    &.fijar-body{
+        overflow: hidden;
+    }
+    &.body-scroll{
+        padding-top: 51px;
+    }
+}
+// parrafos
+p{
+    font-size: 2rem;
+    color: v.$negro;
+    line-height: 1.5;
+}
+.contenedor{
+    width: 95%;
+    max-width: 120rem;//ancho maximo es 120rem
+    margin: 0 auto;
+}
+a{ 
+    text-decoration: none;//elimina las lines q marcan como un enlace
+}
+h1,h2,h3{
+    margin: 0 0 3rem 0;
+}
+h1{
+    font-size: 2rem;
+}
+h2{
+    font-size: 1.6rem;
+}
+h3{
+    font-size: 1rem;
+}
+img{
+    width: 80%;
+    height: auto;
+    display: block;
+}

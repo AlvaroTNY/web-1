@@ -1,0 +1,93 @@
+@use '../base/variable' as v;
+@use 'base/mixis' as M;
+
+.lineup{
+    background-color: v.$rosa;
+    padding: 5rem 0;
+    h3,p{
+        text-align: center;
+        color: v.$blanco;
+        font-weight: 400;
+    }
+    .dia{
+        text-transform: uppercase;
+        margin: 3rem 0;
+    }
+}
+.escenarios-contenedor{
+    @media screen and (max-width: 767px){
+        width: 50%;
+        .escenario{
+            margin-bottom: 20px;
+        }
+        .escenario:nth-child(2){
+            margin-bottom: 0;
+        }
+    }
+    
+    @include M.tablet {
+        @include M.grid(2, 5rem); 
+    }
+    p{
+        color: v.$negro;
+    }
+    .escenario{
+        padding-top: 1rem;
+        border-radius: 6px;
+        width: 100%;
+        height: 100%;
+        p{
+            &:after{
+                content: '';
+                display: block;
+                width: 15rem;
+                height: 7.5rem;
+                background-size: 11rem;
+                background-repeat: no-repeat;
+                background-position: center center;
+                margin: 1rem auto 0 auto;
+            }
+
+        }  
+            
+        }
+}
+// nombre-escenario
+
+.edm .nombre-escenario:after{
+    background-image: url(../../../build/img/icono_edm.png);
+
+}
+.rock .nombre-escenario:after{
+    background-image: url(../../../build/img/icono_rock.avif);
+}
+
+.calendario{
+    @include M.resetear-lista;
+    li{
+        padding: 1.5rem;
+        font-weight: 700;
+        span{
+            font-weight: 400;
+            text-align: center;
+        }
+    }
+}
+
+
+.bg-amarillo{
+    background-color: v.$amarillo;
+    li:nth-child(odd){//selecciona solo elementos impares osea uno si y uno no
+        background-color: darken(v.$amarillo,15%);
+        border-radius: 10px;
+        border-top: 4px solid v.$rosa;
+    }
+}
+.bg-verde{
+    background-color: v.$verde;
+    li:nth-child(odd){//selecciona solo elementos impares osea uno si y uno no
+        background-color: darken(v.$verde,15%);
+        border-radius: 10px;
+        border-bottom: 4px solid chartreuse;
+    }
+}

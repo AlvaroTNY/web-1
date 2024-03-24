@@ -1,0 +1,55 @@
+// uso de mixnis
+@use "variable" as v;
+
+// @mixin  heading($color, $border-radius: false) {
+//     text-transform: uppercase;
+//     font-size: 2.4rem;
+//     color: $color;
+//     letter-spacing: 1px;//nos permite agregar separacion en pixeles por letra encontradas
+//     background-color: aqua;
+
+//     @if border-radius{//se ejecutara si la coiniciedencia es true osea si el header lo tiene true hara una ejecucion
+//         border-radius: 1rem;
+//     }
+// }
+
+// @mixin telefono {
+//     @media (min-width: 480px) {
+//         @content;//inyeccion de codigo desde @includes M.resolucionMovil{.....
+//     }
+// }
+@mixin telefono {
+    @media (min-width: v.$telefono) {
+        @content;//inyeccion de codigo desde @includes M.resolucionMovil{.....
+    }
+}
+
+@mixin tablet {
+    @media (min-width: v.$tablet){
+        @content;
+    }
+}
+
+@mixin dektop{
+    @media (min-width: v.$dektop){
+        @content;
+    }
+}
+
+@mixin dektopXL{
+    @media (min-width: v.$dektopXl){
+        @content;
+    }
+}
+@mixin grid($columnas, $espaciado){//crea dos columnas con una separacion de 5rem
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    // column-gap: $espaciado;
+    gap: $espaciado;
+}
+
+@mixin resetear-lista{
+    margin: 0;
+    padding: 0;
+    list-style: none;//quita el los puntos que trae por defecto las listasssfsf
+}

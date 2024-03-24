@@ -1,0 +1,13 @@
+// creando una variable
+// $rojo: red;
+
+// manera en la q vamos a compilar otro archivo donde estan almacenado las varaibles
+// @import "base/variable";
+@use "base";
+@use "layout";
+// @use "contenido";
+// @import "contenido/contenido";
+
+// body{
+//     background-color: $rojo;//registro de un manera distinta a una variable en css
+// }
